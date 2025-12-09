@@ -1,53 +1,59 @@
 # 🛡️ Modélisation et Audit : Registre Sécurisé des Mots de Passe Administrateurs
 
-Ce projet représente la **conception et l'implémentation d'un Système d'Information (SI)** sécurisé pour la gestion des mots de passe des comptes administrateurs.  
-Il met l’accent sur la **modélisation des données** et la **traçabilité (audit)**.
+Ce projet représente la **conception et l'implémentation d'un Système d'Information (SI)** sécurisé et centralisé pour la gestion des mots de passe des comptes administrateurs. Il vise à résoudre le problème de l'insécurité et du manque de traçabilité.
 
 | Informations du Projet | Détails |
 | :--- | :--- |
-| **Objectif Principal** | Stockage sécurisé et audit des mots de passe |
-| **Compétences Clés** | MCD / MLD, SQL, Gouvernance des données, Historisation |
-| **Outil** | Microsoft Access |
+| **Objectif Principal** | Fournir une solution robuste pour le stockage **chiffré** et l'**audit** des identifiants et mots de passe. |
+| **Compétences Clés** | Modélisation de Données (MCD/MLD), SQL Querying, Data Governance, Audit Trail (Historisation). |
+| **Outil d'Implémentation**| Microsoft Access (Base de Données Relationnelle). |
 
 ---
 
-## 🚀 Compétences Techniques
+## 🚀 Compétences Techniques Démontrées
 
-- Modélisation de données (MCD / MLD)
-- Gouvernance et traçabilité (Audit trail)
-- Sécurité logique (mot de passe chiffré)
+* **Modélisation de Données :** Maîtrise de la conception de schémas (MCD/MLD).
+* **Gouvernance et Traçabilité :** Mise en place d'un système d'**historisation** pour l'audit rigoureux des modifications.
+* **Sécurité Logique :** Prise en compte du stockage du mot de passe sous forme **cryptée**.
 
 ---
 
-## 📋 Étapes de Conception
+## 📋 Les Étapes de Conception
 
-### 1. Dictionnaire de Données
-![Dictionnaire de Données](Ressources/Data_Dictionary.png.png)
+### 1. Dictionnaire de Données et Classification
+![Tableau du Dictionnaire de Données montrant la classification](Ressources/Data_Dictionary.png.png)
 
 ### 2. Modèle Conceptuel de Données (MCD)
-![MCD](Ressources/MCD_Schema.png.png)
+![Modèle Conceptuel de Données (MCD) du registre de mots de passe](Ressources/MCD_Schema.png.png)
 
 ### 3. Modèle Logique de Données (MLD)
-![MLD](Ressources/MLD_Schema.png.png)
+![Modèle Logique de Données (MLD) du registre de mots de passe](Ressources/MLD_Schema.png.png)
 
 ---
 
-## 🛠️ Implémentation et Audit
+## 🛠️ Implémentation et Exploitation (SQL et Audit)
 
-### 1. Relations entre les Tables (Access)
-![Relations Access](Ressources/Relations_Access.png.png)
+### 1. Relations entre les Tables (Intégrité Référentielle)
+![Schéma des relations entre les tables dans Access](Ressources/Relations_Access.png.png)
 
-### 2. Requêtes d’Audit
+### 2. Requête d'Audit et Traçabilité (Historisation)
 
-#### ➤ Requête 1 : Administrateur lié au mot de passe
-![Audit Query 1](Ressources/Audit_Query_1.png.png)
-
-#### ➤ Requête 2 : Historique des modifications
-![Audit Query 2](Ressources/Audit_Query_2.png.png)
+* **L'Administrateur concerné (Requête 3):** Identification de l'administrateur associé à un mot de passe.
+    ![Résultat de la Requête 3 montrant les administrateurs et les IDs de mots de passe](Ressources/Audit_Query_1.png.png)
+* **L'Historique des Modifications (Requête 4):** Trace qui a modifié le mot de passe, son email, et la date de l'action (`Date_Modification`).
+    ![Résultat de la Requête 4 montrant l'historique des modifications par administrateur](Ressources/Audit_Query_2.png.png)
 
 ---
 
-## 📚 Rapport complet
+### 📚 Documentation Complète
+* [Rapport Complet du Projet de Système d'Information (PDF)](Rapport_Modelisation_Audit_MotsDePasse.pdf)
 
-📄 **Télécharger le rapport :**  
-[Rapport_modelisation_audit](Rapport_Modelisation_Audit_MotsDePasse.pdf)
+---
+
+**L-Khatwa L-Akheera Li Ghadi Tdir:**
+
+1.  **Copier/Coller** Had l-Code **kamal** f'l-`README.md` dyalek.
+2.  **Commiti** l-tghyir.
+3.  **Actualisi** l-page GitHub b'ch7al men marra, w 3awd shouf.
+
+**Mab9a lik walo! Hadchi houwa l-7ell l-mou7tamel l'akhir.**
