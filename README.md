@@ -32,7 +32,7 @@ Le dictionnaire (page 4 du rapport) établit la nature de chaque donnée (quanti
 
 ### 2. Modèle Conceptuel de Données (MCD)
 
-Le MCD (page 6 du rapport) définit les entités principales du système et les **règles de gestion** via les cardinalités.
+Le MCD (page 6 du rapport) définit les entités principales du système et les **règles de gestion** via les cardinalités (par exemple, chaque mot de passe est obligatoirement (1,1) assigné à un administrateur).
 ![Modèle Conceptuel de Données (MCD) du registre de mots de passe](Ressources/MCD_Schema.png) 
 
 ### 3. Modèle Logique de Données (MLD)
@@ -53,7 +53,7 @@ Ce schéma (page 11 du rapport) montre la mise en œuvre effective des relations
 
 Cette requête (page 13 du rapport) démontre la capacité d'**extraction de données (SQL Querying)** et d'**audit**.
 
-* **L'Administrateur concerné (Query 3):** Identification de l'administrateur.
+* **L'Administrateur concerné (Query 3):** Identification de l'administrateur et du mot de passe.
     ![Résultat de la Requête 3 montrant les administrateurs et les IDs de mots de passe](Ressources/Audit_Query_1.png) 
 * **L'Historique des Modifications (Query 4):** Qui a modifié le mot de passe, son email, et la date de l'action (`Date_Modification`).
     ![Résultat de la Requête 4 montrant l'historique des modifications par administrateur](Ressources/Audit_Query_2.png) 
