@@ -49,13 +49,13 @@ Le MLD (page 8 du rapport) est la traduction du MCD en structure de tables, déf
 Ce schéma (page 11 du rapport) montre la mise en œuvre effective des relations définies dans le MLD au sein de Microsoft Access, garantissant l'**intégrité référentielle** de la base de données.
 ![Schéma des relations entre les tables dans Access](Ressources/Relations_Access.png) 
 
-### 2. Requête d'Audit et Traçabilité (Query 4)
+### 2. Requête d'Audit et Traçabilité (Historisation)
 
-Cette requête (page 13 du rapport) démontre la capacité d'**extraction de données (SQL Querying)** et d'**audit**. Elle permet de tracer :
+Cette requête (page 13 du rapport) démontre la capacité d'**extraction de données (SQL Querying)** et d'**audit**.
 
-* **L'Administrateur concerné (Query 3):** Qui a des mots de passe dans le registre.
+* **L'Administrateur concerné (Query 3):** Identification de l'administrateur.
     ![Résultat de la Requête 3 montrant les administrateurs et les IDs de mots de passe](Ressources/Audit_Query_1.png) 
-* **L'Historique des Modifications (Query 4):** Qui (`Nom_Admin`) a effectué la modification, son email, et la date de l'action (`Date_Modification`).
+* **L'Historique des Modifications (Query 4):** Qui a modifié le mot de passe, son email, et la date de l'action (`Date_Modification`).
     ![Résultat de la Requête 4 montrant l'historique des modifications par administrateur](Ressources/Audit_Query_2.png) 
 
 ---
