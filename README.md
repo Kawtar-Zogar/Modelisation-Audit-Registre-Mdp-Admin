@@ -1,60 +1,65 @@
 # 🛡️ Modélisation et Audit : Registre Sécurisé des Mots de Passe Administrateurs
 
-Ce projet représente la **conception et l'implémentation d'un Système d'Information (SI)** sécurisé et centralisé pour la gestion des mots de passe des comptes administrateurs. Il vise à résoudre le problème de l'insécurité et du manque de traçabilité.
+Ce projet documente la conception et l'implémentation d'un **Système d'Information (SI)** critique destiné à la gestion et à l'audit des mots de passe des comptes administrateurs. L'objectif principal est d'établir une solution robuste garantissant la **sécurité, la traçabilité et la gouvernance des données** sensibles.
 
 | Informations du Projet | Détails |
 | :--- | :--- |
-| **Objectif Principal** | Fournir une solution robuste pour le stockage **chiffré** et l'**audit** des identifiants et mots de passe. |
-| **Compétences Clés** | Modélisation de Données (MCD/MLD), SQL Querying, Data Governance, Audit Trail (Historisation). |
+| **Objectif Principal** | Assurer le stockage sécurisé (crypté) et la traçabilité complète des modifications des identifiants et mots de passe. |
+| **Compétences Clés** | Architecture de Données (MCD/MLD), Data Governance, SQL Querying, Audit Trail, Intégrité Référentielle. |
 | **Outil d'Implémentation**| Microsoft Access (Base de Données Relationnelle). |
 
 ---
 
-## 🚀 Compétences Techniques Démontrées
+## 🚀 Valorisation des Compétences Techniques
 
-* **Modélisation de Données :** Maîtrise de la conception de schémas (MCD/MLD).
-* **Gouvernance et Traçabilité :** Mise en place d'un système d'**historisation** pour l'audit rigoureux des modifications.
-* **Sécurité Logique :** Prise en compte du stockage du mot de passe sous forme **cryptée**.
+Ce projet met en lumière les compétences fondamentales en ingénierie et architecture de données :
+
+1.  **Modélisation de Données :** Maîtrise de la traduction des besoins fonctionnels en schémas de données structurés (MCD et MLD).
+2.  **Gouvernance des Données :** Définition des standards (dictionnaire de données) pour la qualité et la classification de l'information.
+3.  **Audit Trail :** Conception du mécanisme d'**historisation** (via l'entité `HistoriqueMdp`) indispensable pour la conformité et la vérification des actions.
+4.  **Sécurité :** Prise en compte de l'obligation de stocker les mots de passe sous forme **cryptée** (via l'attribut `Mot_Passe_Crypte`).
 
 ---
 
-## 📋 Les Étapes de Conception (Focus Data Architecture)
+## 📋 Les Étapes de Conception et de Modélisation
 
 ### 1. Dictionnaire de Données et Classification
-**Chra7:** Hada howa l-jadwal l'awal (page 4), kaywerri kolla **donnée** (b7al `ID Admin`, `Nom Admin`, `Mot_Passe_Crypte`), w kay7addad l-format dyalha w l-classification (Quantitative/Qualitative, Permanente/Temporaire). Hada mouhim l'l'**Gouvernance** w **Qualité des Données**.
+
+**Analyse :** Le dictionnaire de données (page 4) établit la **norme et la structure** de chaque attribut utilisé dans le système. Il spécifie le format, la nature (qualitative/quantitative) et la classification des données, un pilier essentiel de la **Data Governance**.
 ![Tableau du Dictionnaire de Données montrant la classification](Ressources/Data_Dictionary.png.png)
 
 ### 2. Modèle Conceptuel de Données (MCD)
-**Chra7:** L-MCD (page 6) howa l-khalita dial l'3ala9at bin l-Entités l-Asasiya (b7al `Administrateur`, `MotDePasse`, `HistoriqueMdp`). Kaywerri **l-règles dial l-gestion** (b7al: koll **`MotDePasse`** khasso ykoun **`assigné`** l'wa7ed **`Administrateur`**).
+
+**Analyse :** Le MCD (page 6) représente la structure logique du système. Il définit les entités principales (`Administrateur`, `MotDePasse`, `HistoriqueMdp`) et les **règles de gestion** via les cardinalités. Il modélise notamment la relation d'**Historisation**, garantissant qu'aucune modification de mot de passe ne puisse se faire sans laisser de trace.
 ![Modèle Conceptuel de Données (MCD) du registre de mots de passe](Ressources/MCD_Schema.png.png)
 
 ### 3. Modèle Logique de Données (MLD)
-**Chra7:** L-MLD (page 8) howa tarjama dial l-MCD l'wa7ed l-structure dial les tables (`ADMINISTRATEUR`, `MOTDEPASSE`, `SYSTEME`, `HISTORIQUEMDP`), m3a l-Clés Primaires (PK) w l-Clés Étrangères (FK). Hada howa l'design li ghandirou bih l-Base de Données f'Access.
+
+**Analyse :** Le MLD (page 8) est la traduction du MCD en un schéma physique prêt pour l'implémentation. Il définit formellement les tables, les clés primaires (PK) et les clés étrangères (FK), assurant la **non-redondance** et l'optimisation des requêtes.
 ![Modèle Logique de Données (MLD) du registre de mots de passe](Ressources/MLD_Schema.png.png)
 
 ---
 
-## 🛠️ Implémentation et Exploitation (SQL et Audit)
+## 🛠️ Implémentation et Fonctionnalités d'Audit
 
 ### 1. Relations entre les Tables (Intégrité Référentielle)
-**Chra7:** Had l'image (page 11) katchra7 kifach l-Tables tconnktao (li howa tarjama dial l-MLD) f'l-Logiciel **MS Access**. Had l'connexion mouhima bach n'dmennou l'**Intégrité Référentielle** (ma t9derch t7eddef wa7ed l'Administrateur bla ma t'sawweb l'Mots de Passe dialou l'lawlin).
+
+**Analyse :** Ce schéma (page 11) montre la mise en œuvre des jointures entre les tables dans Access. L'établissement des relations est crucial pour maintenir l'**Intégrité Référentielle** : le système empêche toute suppression ou modification qui pourrait compromettre la cohérence historique des données.
 ![Schéma des relations entre les tables dans Access](Ressources/Relations_Access.png.png)
 
-### 2. Requête d'Audit et Traçabilité (Historisation)
+### 2. Requêtes d'Audit (SQL Querying)
 
-Had les requêtes kaywerriwna l'9odra dial l-Système 3la l'**Traçabilité** w l'**Audit** (page 13):
+Ces requêtes démontrent la capacité du système à générer des **pistes d'audit (Audit Trail)** grâce à l'historisation des données :
 
-* **L'Administrateur concerné (Requête 3):**
-    **Chra7:** Had l'requête katsta3mel l'SQL bach t'extracti **smiyat l-Administrateurs** m3a l'ID dial l-Mots de Passe li m'assinyin lihom. Katchra7 chkoun responsable 3la achmen compte.
+* **Requête 3 : Responsabilité des Administrateurs**
+    **Analyse :** Cette requête utilise des jointures SQL pour identifier clairement quels mots de passe sont attribués à quel administrateur. Elle établit une chaîne de **responsabilité** immédiate au sein du système.
     ![Résultat de la Requête 3 montrant les administrateurs et les IDs de mots de passe](Ressources/Audit_Query_1.png.png)
 
-* **L'Historique des Modifications (Requête 4):**
-    **Chra7:** Had l'requête katchouf table **`HistoriqueMdp`**. Katwerri **chkoune** (par `Nom_Admin` w `Email_Admin`) **wa9tach** (`Date_Modification`) b'ddabt dar l-tghyir 3la wa7ed l-mot de passe. Hada howa l'Audit Trail l'Moussa77a7.
+* **Requête 4 : Trace des Modifications (Audit Trail)**
+    **Analyse :** Cette requête est le cœur de l'audit (page 13). Elle extrait de la table `HistoriqueMdp` les informations sur **qui** (`Nom_Admin`, `Email_Admin`) a effectué la modification, **quand** (`Date_Modification`) et sur quel mot de passe. Elle répond directement aux exigences de **conformité et de traçabilité**.
     ![Résultat de la Requête 4 montrant l'historique des modifications par administrateur](Ressources/Audit_Query_2.png.png)
 
 ---
 
 ### 📚 Documentation Complète
 * [Rapport Complet du Projet de Système d'Information (PDF)](Rapport_Modelisation_Audit_MotsDePasse.pdf)
-
----
