@@ -50,10 +50,4 @@ Ce projet représente la **conception et l'implémentation d'un Système d'Infor
 
 ---
 
-**L-Khatwa L-Akheera Li Ghadi Tdir:**
 
-1.  **Copier/Coller** Had l-Code **kamal** f'l-`README.md` dyalek.
-2.  **Commiti** l-tghyir.
-3.  **Actualisi** l-page GitHub b'ch7al men marra, w 3awd shouf.
-
-**Mab9a lik walo! Hadchi houwa l-7ell l-mou7tamel l'akhir.**
