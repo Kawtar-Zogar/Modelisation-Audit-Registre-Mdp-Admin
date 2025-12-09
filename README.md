@@ -1,6 +1,3 @@
-# Modelisation-Audit-Registre-Mdp-Admin
-Conception et implémentation d'un Système d'Information sécurisé pour le Registre des Mots de Passe Administrateurs, mettant en avant les compétences en modélisation de données (MCD/MLD) et en traçabilité (Audit Trail).
-
 # 🛡️ Modélisation et Audit : Registre Sécurisé des Mots de Passe Administrateurs
 
 Ce projet représente la **conception et l'implémentation d'un Système d'Information (SI)** sécurisé pour la gestion des mots de passe des comptes administrateurs. Il vise à résoudre le problème de l'insécurité et du manque de traçabilité en mettant l'accent sur la **modélisation des données** et la **gouvernance**.
@@ -56,3 +53,7 @@ Ces requêtes (page 13 du rapport) démontrent la capacité d'**extraction de do
 
 ### 📚 Documentation Complète
 * [Rapport Complet du Projet de Système d'Information (PDF)](Rapport_Modelisation_Audit_MotsDePasse.pdf)
+
+---
+
+**Si had l-Code ma khdemch:** Kay3ni annah **GitHub 7abess l-Cache dial les fichiers l-9dam**. Khassk t'dir l-khatwa dial **Re-Upload** (messa7 les 6 photos w 3awd 7etthom) bach t'forci GitHub y'3awd y'traiti les photos b'smiyat jdad.
